@@ -11,7 +11,7 @@ def Trigger(request):
     jenkins_server = jenkins.Jenkins(
         JENKINS_URL, username=JENKINS_USERNAME, password=JENKINS_PASSWORD)
     if parameter == 'report':
-        print('1 invoke jenkins')
+        print('invoke jenkins')
         jenkins_server.build_job('Job1', parameters=None, token='job1')
-        print('2 jenkins invoked')
+        print('jenkins invoked')
     return 'Success'
