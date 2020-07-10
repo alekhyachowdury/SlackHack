@@ -12,6 +12,9 @@ def Trigger(request):
         JENKINS_URL, username=JENKINS_USERNAME, password=JENKINS_PASSWORD)
     if parameter == 'report':
         print('invoke jenkins')
-        jenkins_server.build_job('Job1', parameters=None, token='job1')
-        print('jenkins invoked')
+        jenkins_server.build_job(
+            'IncidentReport', parameters=None, token='mindbenders')
+    else:
+        jenkins_server.build_job(
+            'MindBenders_PipeLine', parameters=None, token='mindbenders')
     return 'Success'
