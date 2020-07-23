@@ -16,9 +16,10 @@ def Trigger(request):
         jenkins_server.build_job(
             'IncidentReport', parameters=None, token='mindbenders')
     elif parameter == 'create':
-        print('invoke crete file')
+        print('invoke create file service')
         requests.get(
             'https://europe-west3-gcp-poc1-282308.cloudfunctions.net/py-android-voice-trigger?parameter=create')
+        print('file cretaed in GCS bucket')
     else:
         jenkins_server.build_job(
             'MindBenders_PipeLine', parameters=None, token='mindbenders')
