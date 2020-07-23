@@ -1,4 +1,5 @@
 import jenkins
+import requests
 
 
 def Trigger(request):
@@ -14,6 +15,10 @@ def Trigger(request):
         print('invoke jenkins')
         jenkins_server.build_job(
             'IncidentReport', parameters=None, token='mindbenders')
+    elif parameter == 'create':
+        print('invoke crete file')
+        requests.get(
+            'https://europe-west3-gcp-poc1-282308.cloudfunctions.net/py-android-voice-trigger?parameter=create')
     else:
         jenkins_server.build_job(
             'MindBenders_PipeLine', parameters=None, token='mindbenders')
