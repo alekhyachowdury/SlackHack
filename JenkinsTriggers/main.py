@@ -3,7 +3,7 @@ import requests
 
 
 def Trigger(request):
-    JENKINS_URL = "http://35.228.157.92:8080"
+    JENKINS_URL = "http://35.228.153.133:8080"
     JENKINS_USERNAME = "mindbenders"
     JENKINS_PASSWORD = "password@1"
 
