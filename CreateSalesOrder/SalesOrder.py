@@ -34,6 +34,7 @@ class CreateSalesOrder(Resource):
             tracer.inject(span, Format.HTTP_HEADERS, headers)
             res = requests.post(
                 url=url, json=request.json, headers=headers)
+            print(headers)
 
         print(res)
         return 'From SalesOrder'

@@ -12,7 +12,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key.json"
 
 subscriber = pubsub_v1.SubscriberClient()
 # pylint: disable=no-member
-subscription_path = subscriber.subscription_path('gcp-poc1-282308', 'testSub1')
+subscription_path = subscriber.subscription_path('gcp-poc1-282308', 'testSub2')
 
 tracer = init_tracer('GCPSubscriberPY')
 
